@@ -2,9 +2,10 @@ $(document).ready(function() {
     $(".loadTable").load("table.html");
     $(".loadModal").load("modal.html");
     $(".loadNavbar").load("navbar.html");
-    var table = $('#maintable').DataTable(
+    var table = $('#maintable').DataTable({
+
         "scrollX": true
-        );
+    });
 });
 
 function addData() {
@@ -19,7 +20,7 @@ function notify() {
         icon: 'glyphicon glyphicon-warning-sign',
         title: 'Bootstrap notify',
         message: 'Turning standard Bootstrap alerts into "notify" like notifications'
-    }, { 
+    }, {
         type: 'success',
         z_index: 1031,
         animate: {
